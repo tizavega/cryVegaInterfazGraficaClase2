@@ -34,11 +34,15 @@
             lblLaboratorio = new Label();
             lblCategoria = new Label();
             lblPrecio = new Label();
-            txtCodigo = new TextBox();
             txtMedicamento = new TextBox();
             txtLaboratorio = new TextBox();
             txtCategoria = new TextBox();
-            txtPrecio = new TextBox();
+            btnIngresar = new Button();
+            listBox1 = new ListBox();
+            nudCodigo = new NumericUpDown();
+            nduPrecio = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)nudCodigo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nduPrecio).BeginInit();
             SuspendLayout();
             // 
             // lblAltaDeMedicamento
@@ -96,14 +100,6 @@
             lblPrecio.TabIndex = 5;
             lblPrecio.Text = "Precio";
             // 
-            // txtCodigo
-            // 
-            txtCodigo.Location = new Point(168, 84);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(100, 23);
-            txtCodigo.TabIndex = 6;
-            txtCodigo.TextChanged += textBox1_TextChanged;
-            // 
             // txtMedicamento
             // 
             txtMedicamento.Location = new Point(168, 128);
@@ -125,23 +121,50 @@
             txtCategoria.Size = new Size(100, 23);
             txtCategoria.TabIndex = 9;
             // 
-            // txtPrecio
+            // btnIngresar
             // 
-            txtPrecio.Location = new Point(168, 260);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(100, 23);
-            txtPrecio.TabIndex = 10;
+            btnIngresar.Location = new Point(168, 308);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(95, 27);
+            btnIngresar.TabIndex = 11;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(29, 351);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(239, 94);
+            listBox1.TabIndex = 12;
+            // 
+            // nudCodigo
+            // 
+            nudCodigo.Location = new Point(168, 85);
+            nudCodigo.Name = "nudCodigo";
+            nudCodigo.Size = new Size(95, 23);
+            nudCodigo.TabIndex = 13;
+            nudCodigo.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // nduPrecio
+            // 
+            nduPrecio.Location = new Point(168, 261);
+            nduPrecio.Name = "nduPrecio";
+            nduPrecio.Size = new Size(100, 23);
+            nduPrecio.TabIndex = 14;
             // 
             // frmEtiquetas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(311, 357);
-            Controls.Add(txtPrecio);
+            ClientSize = new Size(311, 457);
+            Controls.Add(nduPrecio);
+            Controls.Add(nudCodigo);
+            Controls.Add(listBox1);
+            Controls.Add(btnIngresar);
             Controls.Add(txtCategoria);
             Controls.Add(txtLaboratorio);
             Controls.Add(txtMedicamento);
-            Controls.Add(txtCodigo);
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
             Controls.Add(lblLaboratorio);
@@ -154,6 +177,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Farmacia";
             Load += frmEtiquetas_Load;
+            ((System.ComponentModel.ISupportInitialize)nudCodigo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nduPrecio).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,10 +191,13 @@
         private Label lblLaboratorio;
         private Label lblCategoria;
         private Label lblPrecio;
-        private TextBox txtCodigo;
         private TextBox txtMedicamento;
         private TextBox txtLaboratorio;
         private TextBox txtCategoria;
         private TextBox txtPrecio;
+        private Button btnIngresar;
+        private ListBox listBox1;
+        private NumericUpDown nudCodigo;
+        private NumericUpDown nduPrecio;
     }
 }
