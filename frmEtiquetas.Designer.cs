@@ -34,12 +34,17 @@
             lblLaboratorio = new Label();
             lblCategoria = new Label();
             lblPrecio = new Label();
+            txtCodigo = new TextBox();
+            txtMedicamento = new TextBox();
+            txtLaboratorio = new TextBox();
+            txtCategoria = new TextBox();
+            txtPrecio = new TextBox();
             SuspendLayout();
             // 
             // lblAltaDeMedicamento
             // 
             lblAltaDeMedicamento.AutoSize = true;
-            lblAltaDeMedicamento.Location = new Point(192, 32);
+            lblAltaDeMedicamento.Location = new Point(96, 35);
             lblAltaDeMedicamento.Name = "lblAltaDeMedicamento";
             lblAltaDeMedicamento.Size = new Size(122, 15);
             lblAltaDeMedicamento.TabIndex = 0;
@@ -91,11 +96,52 @@
             lblPrecio.TabIndex = 5;
             lblPrecio.Text = "Precio";
             // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(168, 84);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 6;
+            txtCodigo.TextChanged += textBox1_TextChanged;
+            // 
+            // txtMedicamento
+            // 
+            txtMedicamento.Location = new Point(168, 128);
+            txtMedicamento.Name = "txtMedicamento";
+            txtMedicamento.Size = new Size(100, 23);
+            txtMedicamento.TabIndex = 7;
+            // 
+            // txtLaboratorio
+            // 
+            txtLaboratorio.Location = new Point(168, 172);
+            txtLaboratorio.Name = "txtLaboratorio";
+            txtLaboratorio.Size = new Size(100, 23);
+            txtLaboratorio.TabIndex = 8;
+            // 
+            // txtCategoria
+            // 
+            txtCategoria.Location = new Point(168, 216);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(100, 23);
+            txtCategoria.TabIndex = 9;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(168, 260);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(100, 23);
+            txtPrecio.TabIndex = 10;
+            // 
             // frmEtiquetas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(502, 335);
+            ClientSize = new Size(311, 357);
+            Controls.Add(txtPrecio);
+            Controls.Add(txtCategoria);
+            Controls.Add(txtLaboratorio);
+            Controls.Add(txtMedicamento);
+            Controls.Add(txtCodigo);
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
             Controls.Add(lblLaboratorio);
@@ -120,5 +166,10 @@
         private Label lblLaboratorio;
         private Label lblCategoria;
         private Label lblPrecio;
+        private TextBox txtCodigo;
+        private TextBox txtMedicamento;
+        private TextBox txtLaboratorio;
+        private TextBox txtCategoria;
+        private TextBox txtPrecio;
     }
 }
